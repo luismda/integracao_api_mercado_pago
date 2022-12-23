@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react'
-import { TextInput } from './components/TextInput'
+import { Input } from './components/Input'
 import { Button } from './components/Button'
 
 import { api } from './lib/axios'
@@ -57,7 +57,7 @@ export function App() {
               className="mt-4 mx-auto max-w-[250px]"
             />
 
-            <TextInput 
+            <Input 
               className="mt-4"
               name="qrCode"
               type="text"
@@ -77,7 +77,7 @@ export function App() {
           <>
             <form onSubmit={handleCreatePayment}>
               <div className="flex gap-2 mt-4">
-                <TextInput 
+                <Input 
                   placeholder="Nome"
                   name="firstName"
                   type="text"
@@ -85,7 +85,7 @@ export function App() {
                   value={payment.firstName ?? ''}
                 />
 
-                <TextInput 
+                <Input 
                   placeholder="Sobrenome"
                   name="lastName"
                   type="text"
@@ -94,7 +94,7 @@ export function App() {
                 />
               </div>
 
-              <TextInput 
+              <Input 
                 placeholder="E-mail"
                 name="email"
                 type="email"
@@ -103,7 +103,7 @@ export function App() {
                 value={payment.email ?? ''}
               />
 
-              <TextInput 
+              <Input 
                 placeholder="Valor"
                 name="amount"
                 type="number"
@@ -112,7 +112,7 @@ export function App() {
                 value={payment.amount ?? ''}
               />
 
-              <TextInput 
+              <Input 
                 placeholder="Descrição"
                 name="description"
                 type="text"
